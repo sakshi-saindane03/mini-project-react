@@ -1,0 +1,128 @@
+
+.InfoBox {
+    width: 100%;
+}
+
+.weather-card.MuiCard-root {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+    border: 1px solid #e0eaf2;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(40, 90, 130, 0.08);
+}
+
+.weather-image {
+    width: 42%;
+    min-width: 0;
+    background-color: #d9ecfa;
+}
+
+.weather-image .MuiCardMedia-root {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+.weather-content.MuiCardContent-root {
+    flex: 1;
+    min-width: 0;
+    padding: 28px;
+}
+
+.weather-content.MuiCardContent-root:last-child {
+    padding-bottom: 28px;
+}
+
+.city-name.MuiTypography-root {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    color: #244d6b;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.city-name .MuiSvgIcon-root {
+    color: #348bc5;
+    font-size: 30px;
+}
+
+.weather-condition.MuiTypography-root {
+    color: #71869a;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.main-temperature {
+    margin-top: 20px;
+    color: #287eb8;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.feels-like {
+    margin: 5px 0 22px;
+    color: #71869a;
+    font-size: 14px;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.weather-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 12px;
+    border: 1px solid #e1edf6;
+    border-radius: 8px;
+    background-color: #f4f9fd;
+}
+
+.weather-detail span {
+    color: #71869a;
+    font-size: 12px;
+}
+
+.weather-detail strong {
+    color: #294d69;
+    font-size: 17px;
+}
+
+@media (max-width: 650px) {
+    .weather-card.MuiCard-root {
+        flex-direction: column;
+    }
+
+    .weather-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .weather-image .MuiCardMedia-root {
+        min-height: 0;
+        height: 200px;
+    }
+
+    .weather-content.MuiCardContent-root {
+        padding: 20px;
+    }
+
+    .main-temperature {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+}

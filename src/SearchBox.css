@@ -1,0 +1,53 @@
+
+.SearchBox {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.SearchBox form {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.SearchBox .MuiTextField-root {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.SearchBox .MuiOutlinedInput-root {
+    border-radius: 8px;
+}
+
+.SearchBox .MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+    border-color: #368bc5;
+}
+
+.SearchBox .MuiButton-root {
+    min-height: 56px;
+    padding: 0 25px;
+    border-radius: 8px;
+    background-color: #368bc5;
+    font-size: 15px;
+    text-transform: none;
+    box-shadow: none;
+}
+
+.SearchBox .MuiButton-root:hover {
+    background-color: #246fa5;
+    box-shadow: none;
+}
+
+@media (max-width: 480px) {
+    .SearchBox form {
+        flex-direction: column;
+    }
+
+    .SearchBox .MuiTextField-root,
+    .SearchBox .MuiButton-root {
+        width: 100%;
+    }
+}
